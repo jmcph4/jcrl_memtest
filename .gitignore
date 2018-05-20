@@ -35,7 +35,11 @@ tmp/*
 obj/*
 *.secret
 *.tmp
+*.err
+bin/*
 
+include/*
+lib/*
 
 msg.tmp
 
