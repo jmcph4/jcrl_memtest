@@ -13,6 +13,7 @@ all:
 	make memtest_queue;
 	make memtest_multiset;
 	make memtest_set;
+	make memtest_digraph;
 
 memtest_list: $(SRC_DIR)/memtest_list.c
 	$(CC) $^ $(CFLAGS) -o $(BIN_DIR)/$@
@@ -27,6 +28,9 @@ memtest_multiset: $(SRC_DIR)/memtest_multiset.c
 	$(CC) $^ $(CFLAGS) -o $(BIN_DIR)/$@
 
 memtest_set: $(SRC_DIR)/memtest_set.c
+	$(CC) $^ $(CFLAGS) -o $(BIN_DIR)/$@
+
+memtest_digraph: $(SRC_DIR)/memtest_digraph.c
 	$(CC) $^ $(CFLAGS) -o $(BIN_DIR)/$@
 
 .PHONY: clean
