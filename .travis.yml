@@ -1,0 +1,5 @@
+language: c
+install: deps.sh
+build: make
+script: run.sh
+
