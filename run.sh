@@ -1,7 +1,5 @@
 #!/bin/bash
 
-rm bin/*.out bin/*.err # clean up any stale results
-
 for filename in bin/memtest_*; do
     for ((i=0; i<=3; i++)); do
         valgrind --leak-check=full ./$filename $i > $filename"_"$i".out" 2> $filename"_"$i".err"
